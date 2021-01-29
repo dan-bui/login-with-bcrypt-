@@ -1,0 +1,18 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Wellcome</title>
+</head>
+<body>
+    Wellcome @Session["username"]
+    <br />
+    <a href="@Url.Action("Logout","Account")">Logout</a>
+</body>
+</html>

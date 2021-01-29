@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model WebApplication1.Models.Account
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        @ViewBag.error
+        <table>
+            <tr>
+                <td>Username</td>
+                <td>
+                    @Html.TextBoxFor(model => model.username)
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    @Html.PasswordFor(model => model.password)
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Login" />
+                    <br />
+                    <a href="@Url.Action("register","account")">Sign Up</a>
+                </td>
+            </tr>
+        </table>
+    }
+
+
+</body>
+</html>
